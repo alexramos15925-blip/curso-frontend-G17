@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechCart - Tienda Electrónica</title>
   </head>
+
   <body>
     <!-- ENCABEZADO -->
     <header>
@@ -13,6 +14,7 @@
         <ul>
           <li><a href="#catalogo">Catálogo</a></li>
           <li><a href="#compra">Comprar</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
         </ul>
       </nav>
     </header>
@@ -72,6 +74,19 @@
           <p><strong>$2199.99</strong></p>
           <button type="button">Agregar al Carrito</button>
         </article>
+        <article>
+          <figure>
+            <img
+              src="img/laptop-acer.webp"
+              alt="Laptop Acer 17 pulgadas"
+              width="200"
+            />
+            <figcaption>Acer</figcaption>
+          </figure>
+          <h3>Laptop Acer 17"</h3>
+          <p><strong>$2099.99</strong></p>
+          <button type="button">Agregar al Carrito</button>
+        </article>
       </section>
       <aside>
         <h2>Información de la Compra</h2>
@@ -112,6 +127,101 @@
             </tr>
           </tbody>
         </table>
+        <h2>Lista e Información de Productos</h2>
+        <ol>
+          <li>ASUS ZenBook Pro</li>
+          <li>HP Pavilion</li>
+          <li>Dell Inspiron</li>
+          <li>Lenovo ThinkPad</li>
+          <li>Acer Predator</li>
+        </ol>
+        <table>
+          <caption>
+            Especificaciones Técnicas
+          </caption>
+          <thead>
+            <tr>
+              <th>Laptop</th>
+              <th>Procesador</th>
+              <th>RAM</th>
+              <th>Almacenamiento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ASUS</td>
+              <td>Intel Core i7</td>
+              <td>16 GB</td>
+              <td>512 GB SSD</td>
+            </tr>
+            <tr>
+              <td>HP</td>
+              <td>Intel Core i5</td>
+              <td>8 GB</td>
+              <td>256 GB SSD</td>
+            </tr>
+            <tr>
+              <td>Dell</td>
+              <td>Intel Core i3</td>
+              <td>4 GB</td>
+              <td>128 GB SSD</td>
+            </tr>
+            <tr>
+              <td>Lenovo</td>
+              <td>AMD Ryzen 5</td>
+              <td>8 GB</td>
+              <td>512 GB SSD</td>
+            </tr>
+            <tr>
+              <td>Acer</td>
+              <td>Intel Core i7</td>
+              <td>16 GB</td>
+              <td>1 TB SSD</td>
+            </tr>
+          </tbody>
+        </table>
+        <section>
+          <h2>Preguntas Frecuentes</h2>
+
+          <details>
+            <summary>¿Cuánto demora el envío?</summary>
+            <p>
+              Los envíos en Lima pueden demorar aproximadamente 24 horas. Para
+              provincias, el tiempo estimado es de 3 a 5 días.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Puedo comprar más de una laptop?</summary>
+            <p>
+              Sí. Puedes seleccionar una cantidad de hasta 10 unidades en el
+              formulario de compra.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué métodos de pago aceptan?</summary>
+            <p>
+              Actualmente aceptamos pagos con tarjeta, PayPal y contra entrega.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Puedo realizar una compra como empresa?</summary>
+            <p>
+              Sí. Puedes ingresar opcionalmente el nombre de tu empresa y un RUC
+              válido de 11 dígitos en la sección de facturación.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Puedo agregar notas para el repartidor?</summary>
+            <p>
+              Sí. El formulario incluye un campo opcional para escribir
+              instrucciones o notas para el repartidor.
+            </p>
+          </details>
+        </section>
       </aside>
       <section id="compra">
         <h2>Finalizar Compra</h2>
@@ -174,13 +284,23 @@
               <label for="pais">País</label><br />
               <select id="pais" name="pais" required>
                 <option value="">Elige un país</option>
-                <option value="pe">Perú</option>
-                <option value="co">Colombia</option>
-                <option value="mx">México</option>
-                <option value="ar">Argentina</option>
-                <option value="es">España</option>
+
+                <optgroup label="Sudamérica">
+                  <option value="pe">Perú</option>
+                  <option value="co">Colombia</option>
+                  <option value="ar">Argentina</option>
+                </optgroup>
+
+                <optgroup label="Norteamérica">
+                  <option value="mx">México</option>
+                </optgroup>
+
+                <optgroup label="Europa">
+                  <option value="es">España</option>
+                </optgroup>
               </select>
             </p>
+
             <p>
               <label for="telefono">Teléfono</label><br />
               <input
@@ -221,6 +341,33 @@
               ></textarea>
             </p>
           </fieldset>
+          <fieldset>
+            <legend>Datos de Facturación</legend>
+
+            <p>
+              <label for="nombre-empresa">Nombre de la Empresa (opcional)</label
+              ><br />
+              <input
+                type="text"
+                id="nombre-empresa"
+                name="nombre-empresa"
+                autocomplete="organization"
+              />
+            </p>
+
+            <p>
+              <label for="ruc">RUC (opcional)</label><br />
+              <input
+                type="text"
+                id="ruc"
+                name="ruc"
+                pattern="[0-9]{11}"
+                title="El RUC debe tener exactamente 11 dígitos"
+                inputmode="numeric"
+              />
+            </p>
+          </fieldset>
+
           <fieldset>
             <legend>Metodo de Pago</legend>
             <p>
@@ -264,11 +411,16 @@
     </main>
     <!-- PIE DE PAGINA -->
     <footer>
-      <p>&copy; 2026 TechCart - Proyecto Educativo</p> 
-      <p>Datos e imagenes de <a href="https://dummyjson.com" target="_blank" rel="noopener">DummyJSON</a></p>
+      <p>&copy; 2026 TechCart - Proyecto Educativo</p>
+      <p>
+        Datos e imagenes de
+        <a href="https://dummyjson.com" target="_blank" rel="noopener"
+          >DummyJSON</a
+        >
+      </p>
       <address>
         Contacto: <a href="mailto:lex00159@gmail.com">lex00159@gmail.com</a>
       </address>
-    </footer>  
+    </footer>
   </body>
 </html>
