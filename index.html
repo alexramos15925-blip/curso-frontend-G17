@@ -1,100 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechCart - Tienda Electrónica</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- ENCABEZADO -->
     <header>
-        <h1>TechCart</h1>
-        <nav aria-label="Principal">
-            <ul>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#compra">Comprar</a></li>
-            </ul>
-        </nav>
-        <!-- CONTENIDO PRINCIPAL -->
-        <main>
-            <section id="catalogo">
-                <h2>Catálogo de Productos</h2>
-                <article>
-                    <figure>
-                        <img src="img/laptop-asus.webp" alt="Laptop ASUS 16 pulgadas" width="200">
-                        <figcaption>ASUS</figcaption>
-                    </figure>
-                    <h3>Laptop ASUS 16"</h3>
-                    <p><strong>$1999.99</strong></p>
-                    <button type="button">Agregar al Carrito</button>
-                </article>
-                <article>
-                    <figure>
-                        <img src="img/laptop-hp.jpg" alt="Laptop HP 15.6 pulgadas" width="200">
-                        <figcaption>HP</figcaption>
-                    </figure>
-                    <h3>Laptop HP 15.6"</h3>
-                    <p><strong>$1799.99</strong></p>
-                    <button type="button">Agregar al Carrito</button>
-                </article>
-                <article>
-                    <figure>
-                        <img src="img/laptop-dell.jpg" alt="Laptop Dell 17 pulgadas" width="200">
-                        <figcaption>Dell</figcaption>
-                    </figure>
-                    <h3>Laptop Dell 17"</h3>
-                    <p><strong>$2599.99</strong></p>
-                    <button type="button">Agregar al Carrito</button>
-                </article>
-                <article>
-                    <figure>
-                        <img src="img/laptop-lenovo.jfif" alt="Laptop Lenovo 16 pulgadas" width="200">
-                        <figcaption>Lenovo</figcaption>
-                    </figure>
-                    <h3>Laptop Lenovo 16"</h3>
-                    <p><strong>$2199.99</strong></p>
-                    <button type="button">Agregar al Carrito</button>
-                </article>
-            </section>
-            <aside>
-                <h2>Información de la Compra</h2>
-                <h3>Como comprar en tres pasos</h3>
-                <ol>
-                    <li>Elige un producto del catálogo.</li>
-                    <li>Agrega el producto al carrito.</li>
-                    <li>Confirma tu pedido con tus datos de envío.</li>
-                </ol>
+      <h1>TechCart</h1>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#compra">Comprar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <section id="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <article>
+          <figure>
+            <img
+              src="img/laptop-asus.webp"
+              alt="Laptop ASUS 16 pulgadas"
+              width="200"
+            />
+            <figcaption>ASUS</figcaption>
+          </figure>
+          <h3>Laptop ASUS 16"</h3>
+          <p><strong>$1999.99</strong></p>
+          <button type="button">Agregar al Carrito</button>
+        </article>
+        <article>
+          <figure>
+            <img
+              src="img/laptop-hp.jpg"
+              alt="Laptop HP 15.6 pulgadas"
+              width="200"
+            />
+            <figcaption>HP</figcaption>
+          </figure>
+          <h3>Laptop HP 15.6"</h3>
+          <p><strong>$1799.99</strong></p>
+          <button type="button">Agregar al Carrito</button>
+        </article>
+        <article>
+          <figure>
+            <img
+              src="img/laptop-dell.jpg"
+              alt="Laptop Dell 17 pulgadas"
+              width="200"
+            />
+            <figcaption>Dell</figcaption>
+          </figure>
+          <h3>Laptop Dell 17"</h3>
+          <p><strong>$2599.99</strong></p>
+          <button type="button">Agregar al Carrito</button>
+        </article>
+        <article>
+          <figure>
+            <img
+              src="img/laptop-lenovo.jfif"
+              alt="Laptop Lenovo 16 pulgadas"
+              width="200"
+            />
+            <figcaption>Lenovo</figcaption>
+          </figure>
+          <h3>Laptop Lenovo 16"</h3>
+          <p><strong>$2199.99</strong></p>
+          <button type="button">Agregar al Carrito</button>
+        </article>
+      </section>
+      <aside>
+        <h2>Información de la Compra</h2>
+        <h3>Como comprar en tres pasos</h3>
+        <ol>
+          <li>Elige un producto del catálogo.</li>
+          <li>Agrega el producto al carrito.</li>
+          <li>Confirma tu pedido con tus datos de envío.</li>
+        </ol>
 
-                <h3>Costos de Envío</h3>
-                <table>
-                    <caption>Tarifas por Zona</caption>
-                    <thead>
-                        <tr>
-                            <th>Zona</th>
-                            <th>Tiempo</th>
-                            <th>Costo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lima</td>
-                            <td>24 horas</td>
-                            <td>Gratis</td>
-                        </tr>
-                        <tr>
-                            <td>Provincias</td>
-                            <td>3-5 días</td>
-                            <td>$9.90</td>
-                        </tr>
-                        <tr>
-                            <td>Internacional</td>
-                            <td>7-15 días</td>
-                            <td>$29.90</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </aside>
-        </main>
-    </header>    
-</body>
+        <h3>Costos de Envío</h3>
+        <table>
+          <caption>
+            Tarifas por Zona
+          </caption>
+          <thead>
+            <tr>
+              <th>Zona</th>
+              <th>Tiempo</th>
+              <th>Costo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lima</td>
+              <td>24 horas</td>
+              <td>Gratis</td>
+            </tr>
+            <tr>
+              <td>Provincias</td>
+              <td>3-5 días</td>
+              <td>$9.90</td>
+            </tr>
+            <tr>
+              <td>Internacional</td>
+              <td>7-15 días</td>
+              <td>$29.90</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+      <section id="compra">
+        <h2>Finalizar Compra</h2>
+        <form>
+          <fieldset>
+            <legend>Datos del Envio</legend>
+            <p>
+              <label for="nombre">Nombre Completo</label><br />
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                minlength="3"
+                autocomplete="name"
+              />
+            </p>
+            <p>
+              <label for="email">Correo Electrónico</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </p>
+            <p>
+              <label for="direccion">Dirección</label><br />
+              <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                required
+                minlength="5"
+                autocomplete="address-line1"
+              />
+            </p>
+            <p>
+              <label for="ciudad">Ciudad</label><br />
+              <input
+                type="text"
+                id="ciudad"
+                name="ciudad"
+                list="ciudades"
+                required
+                autocomplete="address-level2"
+              />
+              <datalist id="ciudades">
+                <option value="Lima"></option>
+                <option value="Bogota"></option>
+                <option value="Arequipa"></option>
+                <option value="Cusco"></option>
+                <option value="Ciudad de México"></option>
+                <option value="Buenos Aires"></option>
+                <option value="Madrid"></option>
+              </datalist>
+            </p>
+            <p>
+              <label for="pais">País</label><br />
+              <select id="pais" name="pais" required>
+                <option value="">Elige un país</option>
+                <option value="pe">Perú</option>
+                <option value="co">Colombia</option>
+                <option value="mx">México</option>
+                <option value="ar">Argentina</option>
+                <option value="es">España</option>
+              </select>
+            </p>
+            <p>
+              <label for="telefono">Teléfono</label><br />
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                pattern="[0-9]{7,}"
+                title="Solo numeros, mínimo 7 dígitos"
+                autocomplete="tel"
+              />
+            </p>
+            <p>
+              <label for="fecha">Fecha de Entrega</label><br />
+              <input type="date" id="fecha" name="fecha" required />
+            </p>
+            <p>
+              <label for="cantidad">Cantidad de unidades</label><br />
+              <input
+                type="number"
+                id="cantidad"
+                name="cantidad"
+                required
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+              />
+            </p>
+            <p>
+              <label for="notas">Notas para el repartidor (opcional)</label
+              ><br />
+              <textarea
+                id="notas"
+                name="notas"
+                rows="5"
+                maxlength="200"
+              ></textarea>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Metodo de Pago</legend>
+            <p>
+              <input
+                type="radio"
+                id="pago-tarjeta"
+                name="pago"
+                required
+                value="tarjeta"
+              />
+              <label for="pago-tarjeta">Tarjeta</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                id="pago-paypal"
+                name="pago"
+                required
+                value="paypal"
+              />
+              <label for="pago-paypal">PayPal</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                id="pago-contra"
+                name="pago"
+                required
+                value="contraentrega"
+              />
+              <label for="pago-contra">Contra entrega</label>
+            </p>
+          </fieldset>
+          <p>
+            <input type="checkbox" id="terminos" name="terminos" required />
+            <label for="terminos">Acepto los términos y condiciones</label>
+          </p>
+          <button type="submit">Confirmar Pedido</button>
+        </form>
+      </section>
+    </main>
+    <!-- PIE DE PAGINA -->
+    <footer>
+      <p>&copy; 2026 TechCart - Proyecto Educativo</p> 
+      <p>Datos e imagenes de <a href="https://dummyjson.com" target="_blank" rel="noopener">DummyJSON</a></p>
+      <address>
+        Contacto: <a href="mailto:lex00159@gmail.com">lex00159@gmail.com</a>
+      </address>
+    </footer>  
+  </body>
 </html>
