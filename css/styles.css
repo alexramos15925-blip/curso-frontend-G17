@@ -1,5 +1,10 @@
 /*Tipo*/
 header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
     background-color: #fff;
     padding: 1rem 1.25rem;
     border-radius: 12px;
@@ -8,15 +13,34 @@ header {
 }
 
 header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 44px;
+    background-color: #5b25da;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
     margin: 0;
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     background-color: #fff;
     border: 1px solid #d2d2d7;
     border-radius: 12px;
     padding: 1.5rem;
     margin: 1.5rem 0;
+}
+aside h2,aside h3, aside ol {
+    margin: 0;
+}
+aside h3{
+    margin-top: 16px;
 }
 aside ol{ 
     padding-left: 1.5rem;
@@ -103,13 +127,13 @@ figcaption {
 }
 
 article {
+    /* 0: no crece, 0: no se encoge, 200px de base */
+    flex: 0 0 200px;
     text-align: center;
     background-color: #fff;
     border: 1px solid #d2d2d7;
     border-radius: 12px;
     padding: 1rem;
-    margin: 1rem 0;
-    max-width: 360px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 article:not(.destacado):hover {
@@ -149,6 +173,27 @@ button {
     border-radius: 12px;
     padding: 1.5rem;
 }
+#compra p{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#compra br{
+    display: none;
+}
+#compra fieldset label{
+    flex: 0 0 180px;
+}
+#compra input, #compra select, #compra textarea {
+    flex: 0 1 320px;
+    min-width: 0;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+}
+
 fieldset {
     border: 1px solid #d2d2d7;
     border-radius: 10px;
@@ -166,16 +211,8 @@ legend {
     padding: 0 0.4rem;
 }
 
-#compra input, #compra select, #compra textarea {
-    width: 100%;
-    padding: 0.5rem 0;
-    border: 1px solid #d2d2d7;
-    border-radius: 8px;
-    margin-top: 0.25rem;
-}
 #compra input[type="radio"], #compra input[type="checkbox"] {
-    width: auto;
-    margin-top: 0;
+    flex: 0 0 auto;
 }
 #compra[type="radio"] + label, #compra[type="checkbox"] + label {
     margin-left: 0.35rem;
@@ -191,15 +228,10 @@ legend {
 nav > ul {
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav li {
-    display: inline-block;
-}
-nav li:not(:last-child) {
-    margin-right: 1.25rem;
-}
 /*Descendiente*/
 nav a {
     text-decoration: none;
@@ -274,4 +306,9 @@ footer p, footer address {
 }
 footer address {
     font-style: normal;
+}
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
