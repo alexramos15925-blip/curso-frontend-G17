@@ -21,8 +21,16 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
       <section id="catalogo">
-        <h2>Catálogo de Productos</h2> 
-        <div class="productos"> 
+        <nav class="categorias" aria-label="Categorías de productos">
+          <ul>
+            <li><a href="#catalogo">Laptops</a></li>
+            <li><a href="#catalogo">Accesorios</a></li>
+            <li><a href="#catalogo">Monitores</a></li>
+            <li><a href="#catalogo">Celulares</a></li>
+          </ul>
+        </nav>
+        <h2>Catálogo de Productos</h2>
+        <div class="productos">
           <article class="destacado">
             <figure>
               <img
@@ -34,7 +42,10 @@
             </figure>
             <h3 class="titulo-producto">Laptop ASUS 16"</h3>
             <p><strong>$1999.99</strong></p>
-            <button type="button">Agregar al Carrito</button>
+            <button type="button" class="btn-carrito">
+              Agregar al Carrito
+              <span class="contador">0</span>
+            </button>
           </article>
           <article>
             <figure>
@@ -47,7 +58,10 @@
             </figure>
             <h3 class="titulo-producto">Laptop HP 15.6"</h3>
             <p><strong>$1799.99</strong></p>
-            <button type="button">Agregar al Carrito</button>
+            <button type="button" class="btn-carrito">
+              Agregar al Carrito
+              <span class="contador">0</span>
+            </button>
           </article>
           <article>
             <figure>
@@ -60,7 +74,10 @@
             </figure>
             <h3 class="titulo-producto">Laptop Dell 17"</h3>
             <p><strong>$2599.99</strong></p>
-            <button type="button">Agregar al Carrito</button>
+            <button type="button" class="btn-carrito">
+              Agregar al Carrito
+              <span class="contador">0</span>
+            </button>
           </article>
           <article>
             <figure>
@@ -73,7 +90,10 @@
             </figure>
             <h3 class="titulo-producto">Laptop Lenovo 16"</h3>
             <p><strong>$2199.99</strong></p>
-            <button type="button">Agregar al Carrito</button>
+            <button type="button" class="btn-carrito">
+              Agregar al Carrito
+              <span class="contador">0</span>
+            </button>
           </article>
           <article>
             <figure>
@@ -86,9 +106,12 @@
             </figure>
             <h3 class="titulo-producto">Laptop Acer 17"</h3>
             <p><strong>$2099.99</strong></p>
-            <button type="button">Agregar al Carrito</button>
+            <button type="button" class="btn-carrito">
+              Agregar al Carrito
+              <span class="contador">0</span>
+            </button>
           </article>
-        </div> 
+        </div>
       </section>
       <aside>
         <h2>Información de la Compra</h2>
@@ -263,63 +286,65 @@
                 autocomplete="address-line1"
               />
             </p>
-            <p>
-              <label for="ciudad">Ciudad</label><br />
-              <input
-                type="text"
-                id="ciudad"
-                name="ciudad"
-                list="ciudades"
-                required
-                autocomplete="address-level2"
-              />
-              <datalist id="ciudades">
-                <option value="Lima"></option>
-                <option value="Bogota"></option>
-                <option value="Arequipa"></option>
-                <option value="Cusco"></option>
-                <option value="Ciudad de México"></option>
-                <option value="Buenos Aires"></option>
-                <option value="Madrid"></option>
-              </datalist>
-            </p>
-            <p>
-              <label for="pais">País</label><br />
-              <select id="pais" name="pais" required>
-                <option value="">Elige un país</option>
+            <div class="fila-datos">
+              <p>
+                <label for="ciudad">Ciudad</label><br />
+                <input
+                  type="text"
+                  id="ciudad"
+                  name="ciudad"
+                  list="ciudades"
+                  required
+                  autocomplete="address-level2"
+                />
+                <datalist id="ciudades">
+                  <option value="Lima"></option>
+                  <option value="Bogota"></option>
+                  <option value="Arequipa"></option>
+                  <option value="Cusco"></option>
+                  <option value="Ciudad de México"></option>
+                  <option value="Buenos Aires"></option>
+                  <option value="Madrid"></option>
+                </datalist>
+              </p>
+              <p>
+                <label for="pais">País</label><br />
+                <select id="pais" name="pais" required>
+                  <option value="">Elige un país</option>
 
-                <optgroup label="Sudamérica">
-                  <option value="pe">Perú</option>
-                  <option value="co">Colombia</option>
-                  <option value="ar">Argentina</option>
-                </optgroup>
+                  <optgroup label="Sudamérica">
+                    <option value="pe">Perú</option>
+                    <option value="co">Colombia</option>
+                    <option value="ar">Argentina</option>
+                  </optgroup>
 
-                <optgroup label="Norteamérica">
-                  <option value="mx">México</option>
-                </optgroup>
+                  <optgroup label="Norteamérica">
+                    <option value="mx">México</option>
+                  </optgroup>
 
-                <optgroup label="Europa">
-                  <option value="es">España</option>
-                </optgroup>
-              </select>
-            </p>
+                  <optgroup label="Europa">
+                    <option value="es">España</option>
+                  </optgroup>
+                </select>
+              </p>
 
-            <p>
-              <label for="telefono">Teléfono</label><br />
-              <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                required
-                pattern="[0-9]{7,}"
-                title="Solo numeros, mínimo 7 dígitos"
-                autocomplete="tel"
-              />
-            </p>
-            <p>
-              <label for="fecha">Fecha de Entrega</label><br />
-              <input type="date" id="fecha" name="fecha" required />
-            </p>
+              <p>
+                <label for="telefono">Teléfono</label><br />
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  required
+                  pattern="[0-9]{7,}"
+                  title="Solo numeros, mínimo 7 dígitos"
+                  autocomplete="tel"
+                />
+              </p>
+              <p>
+                <label for="fecha">Fecha de Entrega</label><br />
+                <input type="date" id="fecha" name="fecha" required />
+              </p>
+            </div>
             <p>
               <label for="cantidad">Cantidad de unidades</label><br />
               <input
@@ -412,18 +437,41 @@
         </form>
       </section>
     </main>
-    <!-- PIE DE PAGINA -->
-    <footer>
-      <p>&copy; 2026 TechCart - Proyecto Educativo</p>
-      <p>
-        Datos e imagenes de
-        <a href="https://dummyjson.com" target="_blank" rel="noopener"
-          >DummyJSON</a
-        >
-      </p>
-      <address>
-        Contacto: <a href="mailto:lex00159@gmail.com">lex00159@gmail.com</a>
-      </address>
-    </footer>
-  </body>
-</html>
+    
+<!-- PIE DE PÁGINA -->
+<footer class="pie-tienda">
+  <div class="columna-footer">
+    <h3>TechCart</h3>
+    <p>&copy; 2026 TechCart - Proyecto Educativo</p>
+  </div>
+
+  <div class="columna-footer">
+    <h3>Enlaces</h3>
+    <nav aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#compra">Comprar</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="columna-footer">
+    <h3>Contacto</h3>
+    <address>
+      Correo:
+      <a href="mailto:lex00159@gmail.com">
+        lex00159@gmail.com
+      </a>
+    </address>
+
+    <p>
+      Datos e imágenes de
+      <a href="https://dummyjson.com"
+         target="_blank"
+         rel="noopener">
+        DummyJSON
+      </a>
+    </p>
+  </div>
+</footer>

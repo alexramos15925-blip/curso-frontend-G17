@@ -101,8 +101,6 @@ h2::after {
     margin-top: 0.25rem;
 }
 
-
-
 h3{
     font-size: 1.125rem;
     color: #333;
@@ -128,7 +126,9 @@ figcaption {
 
 article {
     /* 0: no crece, 0: no se encoge, 200px de base */
-    flex: 0 0 200px;
+    /*flex: 0 0 200px;*/
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: #fff;
     border: 1px solid #d2d2d7;
@@ -144,6 +144,17 @@ article:not(.destacado):hover {
 article img {
     max-width: 100%;
     height: auto;
+}
+article button {
+    margin-top: auto;
+    align-self: center;
+}
+article h3 {
+    margin: 0.25rem 0;
+}
+
+article p {
+    margin: 0 0 0 0.75rem;
 }
 
 a {
@@ -269,6 +280,7 @@ textarea:focus-visible {
 }
 .destacado::before {
     content: "Destacado";
+    align-self: center;
     display: inline-block;
     margin-bottom: 0.5rem;
     color: #5b25da;
@@ -293,22 +305,140 @@ figure {
     margin: 0;
 }
 
-footer {
-    margin-top: 2rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid #d2d2d7;
-    text-align: center;
-    color: #6e6e73;
-    font-size: 0.875rem;
-}
-footer p, footer address {
-    margin: 0.25rem 0;
-}
-footer address {
-    font-style: normal;
-}
 .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.categorias ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categorias a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+}
+
+.categorias a:hover {
+    background-color: #e8f1fb;
+}
+
+.fila-datos {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
+
+.fila-datos p {
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    min-width: 0;
+}
+
+.fila-datos input,
+.fila-datos select {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+}
+
+/* D1: Botón de carrito con contador */
+.btn-carrito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.4rem 0.75rem;
+    white-space: nowrap;
+}
+
+.contador {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+    flex: 0 0 22px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #5b25da;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* D2: Pie de tienda en tres columnas */
+.pie-tienda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #d2d2d7;
+    text-align: left;
+    color: #6e6e73;
+    font-size: 0.875rem;
+}
+
+.pie-tienda .columna-footer {
+    display: flex;
+    flex: 1 1 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+}
+
+.pie-tienda h3 {
+    margin: 0;
+    color: #333;
+}
+
+.pie-tienda p,
+.pie-tienda address {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.pie-tienda address {
+    font-style: normal;
+}
+
+.pie-tienda ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.pie-tienda a {
+    overflow-wrap: anywhere;
+}
+
